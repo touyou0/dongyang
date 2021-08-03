@@ -1,0 +1,49 @@
+﻿
+Microsoft Visual Studio Solution File, Format Version 12.00
+# Visual Studio Version 16
+VisualStudioVersion = 16.0.30523.141
+MinimumVisualStudioVersion = 10.0.40219.1
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuchiumaServer.Liff.Api", "BuchiumaServer.Liff.Api\BuchiumaServer.Liff.Api.csproj", "{728D0940-89E0-4B94-8BD8-0EB67255A3C9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuchiumaServer.Liff.Api.Tests", "BuchiumaServer.Liff.Api.Tests\BuchiumaServer.Liff.Api.Tests.csproj", "{D0BD7DBC-4037-4F9D-89BA-B58AE9E99773}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuchiumaServer.Management.Api", "BuchiumaServer.Management.Api\BuchiumaServer.Management.Api.csproj", "{1FA67B85-4EBE-486D-A78C-8ADD300061A9}"
+EndProject
+Project("{9A19103F-16F7-4668-BE54-9A1E7A4F7556}") = "BuchiumaServer.Management.Api.Tests", "BuchiumaServer.Management.Api.Tests\BuchiumaServer.Management.Api.Tests.csproj", "{E78D0162-469B-4A13-9E0B-55764DE74AD7}"
+EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "BuchiumaServer.Common", "BuchiumaServer.Common\BuchiumaServer.Common.csproj", "{9A4C3839-1F0C-4BC6-9AEB-914904F5BA79}"
+EndProject
+Global
+	GlobalSection(SolutionConfigurationPlatforms) = preSolution
+		Debug|Any CPU = Debug|Any CPU
+		Release|Any CPU = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(ProjectConfigurationPlatforms) = postSolution
+		{728D0940-89E0-4B94-8BD8-0EB67255A3C9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{728D0940-89E0-4B94-8BD8-0EB67255A3C9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{728D0940-89E0-4B94-8BD8-0EB67255A3C9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{728D0940-89E0-4B94-8BD8-0EB67255A3C9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{D0BD7DBC-4037-4F9D-89BA-B58AE9E99773}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{D0BD7DBC-4037-4F9D-89BA-B58AE9E99773}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{D0BD7DBC-4037-4F9D-89BA-B58AE9E99773}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{D0BD7DBC-4037-4F9D-89BA-B58AE9E99773}.Release|Any CPU.Build.0 = Release|Any CPU
+		{1FA67B85-4EBE-486D-A78C-8ADD300061A9}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{1FA67B85-4EBE-486D-A78C-8ADD300061A9}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{1FA67B85-4EBE-486D-A78C-8ADD300061A9}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{1FA67B85-4EBE-486D-A78C-8ADD300061A9}.Release|Any CPU.Build.0 = Release|Any CPU
+		{E78D0162-469B-4A13-9E0B-55764DE74AD7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{E78D0162-469B-4A13-9E0B-55764DE74AD7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{E78D0162-469B-4A13-9E0B-55764DE74AD7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{E78D0162-469B-4A13-9E0B-55764DE74AD7}.Release|Any CPU.Build.0 = Release|Any CPU
+		{9A4C3839-1F0C-4BC6-9AEB-914904F5BA79}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{9A4C3839-1F0C-4BC6-9AEB-914904F5BA79}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{9A4C3839-1F0C-4BC6-9AEB-914904F5BA79}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{9A4C3839-1F0C-4BC6-9AEB-914904F5BA79}.Release|Any CPU.Build.0 = Release|Any CPU
+	EndGlobalSection
+	GlobalSection(SolutionProperties) = preSolution
+		HideSolutionNode = FALSE
+	EndGlobalSection
+	GlobalSection(ExtensibilityGlobals) = postSolution
+		SolutionGuid = {DC0E34C3-BFE9-4BCB-8CBA-0D7430F0C720}
+	EndGlobalSection
+EndGlobal
