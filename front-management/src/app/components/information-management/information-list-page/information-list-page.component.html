@@ -1,0 +1,51 @@
+<main>
+  <p></p>
+  <ng-container *ngIf="isLoading; else content">
+  </ng-container>
+</main>
+<ng-template #content>
+<div class="info-area">
+  <div class="infos">
+    <div class="number-info">
+      <div class="number-item">
+        <div class="grid-right">お知らせ内容：</div>
+        <input type="text" style="width: 500px;" />
+      </div>
+      <div class="number-item">
+        <div class="grid-right">開催日：</div>
+        <input type="date" [(ngModel)]="informationDayFrom" style="width: 130px;" />
+      </div>
+      <div class="number-item">
+        <div class="grid-right">終了日：</div>
+        <input type="date" [(ngModel)]="informationDayTo" style="width: 130px;" />
+      </div>
+    </div>
+  </div>
+  <div class="info-light">
+    <div></div>
+    <button class="btn btn-green qr" style="width: 200px; height: 40px;" (click)="onClickCreateInformation()">
+      お知らせ新規
+    </button>
+  </div>
+</div>
+
+<div class="table-area">
+  <div class="t-head">
+    <div>内容</div>
+    <div>開催日</div>
+    <div>終了日</div>
+  </div>
+
+  <div class="t-body" *ngFor="let item of informationItems">
+    <div>
+      <a routerLink="/information/edit/{{ item.informationId }}">{{ item.overview }}</a>            
+    </div>
+    <div>
+      <div class="grid-center">{{ item.informationDayFrom }}</div>
+    </div>
+    <div>
+      <div class="grid-center">{{ item.informationDayTo }}</div>
+    </div>
+  </div>
+</div>
+</ng-template>

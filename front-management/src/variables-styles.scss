@@ -1,0 +1,98 @@
+/* You can add global styles to this file, and also import other style files */
+
+// 色
+$header-color: #fff;
+$dialog-header-color: rgb(121, 220, 245);
+$footer-color: rgb(121, 220, 245);
+$error-color: red;
+$warning-color: orangered;
+
+// text
+$header-text-color: black;
+$dialog-header-text-color: #fff;
+
+// button
+$btn-green: green;
+$hover-green-color: #6fb83f;
+$btn-blue: blue;
+$hover-blue-color: lightblue;
+$btn-red: red;
+$hover-red-color: rgb(245, 120, 120);
+$btn-text: #fff;
+$border-color: silver;
+$btn-cyan: rgb(0, 247, 255);
+$btn-gray-color: gray;
+
+// 余白
+// 0だと横のスクロールバーが表示されるので0.1を指定
+$body-margin: 0.1px;
+$body-padding: 20px;
+
+// パーツ高さ
+$header-hight: 52px;
+$footer-hight: 0px;
+
+// 画面高さ
+$body-hight: calc(100vh - #{$header-hight} - (#{$body-margin} * 2));
+$main-hight: calc(100vh - #{$header-hight} - (#{$body-padding} * 2));
+$body-min-width: 700px;
+
+.btn-green {
+  background: $btn-green;
+}
+.btn-green:hover {
+  background: $hover-green-color;
+}
+
+.btn-green {
+  background: $btn-green;
+}
+.btn-green:hover {
+  background: $hover-green-color;
+}
+
+.btn-blue {
+  background: $btn-blue;
+}
+.btn-blue:hover {
+  background: $hover-blue-color;
+}
+
+.btn-cyan {
+  background: $btn-cyan;
+}
+.btn-cyan:hover {
+  background: $hover-blue-color;
+}
+
+.btn-red {
+  background: $btn-red;
+}
+.btn-red:hover {
+  background: $hover-red-color;
+}
+
+.btn-gray {
+  color: black;
+  background: $btn-gray-color;
+}
+
+.btn {
+  display: flex;
+  color: $btn-text;
+  padding: 4px 0px;
+  border-radius: 5px;
+  text-align: center;
+  align-items: center;
+  justify-content: center;
+  font-weight: bold;
+  text-decoration: none;
+  border: none;
+  width: 100%;
+}
+
+button:disabled {
+  pointer-events: none;
+  background: $btn-gray-color;
+  opacity: 0.3;
+}
