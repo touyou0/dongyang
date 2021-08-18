@@ -4,10 +4,10 @@ export interface InformationRegisterRequest {
   /** お知らせID */
   informationId: string;
 
-  /**お知らせ概要 */
+  /** お知らせ概要 */
   overview: string;
 
-  /**お知らせ詳細 */
+  /** お知らせ詳細 */
   detail: string;
 
   /** お知らせ開催日 */

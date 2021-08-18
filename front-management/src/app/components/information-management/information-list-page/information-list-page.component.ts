@@ -40,7 +40,7 @@ export class InformationListPageComponent implements OnInit {
     this.informationDayFrom = date.getFullYear() + '-' + ("0"+(date.getMonth() + 1)).slice(-2) + '-' +  ("0"+date.getDate()).slice(-2);
     this.informationDayTo = date.getFullYear() + '-' + ("0"+(date.getMonth() + 2)).slice(-2) + '-' +  ("0"+date.getDate()).slice(-2);
     this.informationItems = this.getArrayDummyData();
-    //this.eventItems.push()
+    //this.informationItems.push()
   }
 
   /**

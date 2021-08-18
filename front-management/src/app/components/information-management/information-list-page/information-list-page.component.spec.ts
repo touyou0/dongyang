@@ -1,5 +1,4 @@
 import { ComponentFixture, TestBed } from '@angular/core/testing';
-
 import { InformationListPageComponent } from './information-list-page.component';
 
 describe('InformationListPageComponent', () => {

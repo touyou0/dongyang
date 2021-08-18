@@ -43,7 +43,7 @@ main {
 
     .t-head {
       display: grid;
-      grid-template-columns: minmax(200px, 1fr) 150px 150px;
+      grid-template-columns: minmax(190px, 1fr) 150px 150px;
       grid-template-rows: 30px;
       position: sticky;
       position: -webkit-sticky; /* For macOS/iOS Safari */
