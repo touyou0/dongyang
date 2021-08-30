@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InformationRegisterRequest } from 'src/app/components/core/model-services/information-model';
+import { InformationRegisterRequest } from 'src/app/core/model-services/information-model';
 
 @Component({
   selector: 'app-information-edit-page',

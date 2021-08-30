@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InformationRegisterRequest }  from 'src/app/components/core/model-services/information-model';
+import { InformationRegisterRequest }  from 'src/app/core/model-services/information-model';
 
 @Component({
   selector: 'app-information-list-page',
@@ -13,9 +13,9 @@ export class InformationListPageComponent implements OnInit {
 
   // お知らせ概要
   overview: string = "";
-  // お知らせ開催日
+  // お知らせ掲載開催日
   informationDayFrom = "";
-  // お知らせ終了日
+  // お知らせ掲載終了日
   informationDayTo = "";
   // お知らせ情報リスト
   informationItems: InformationRegisterRequest[] = [];

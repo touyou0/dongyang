@@ -12,11 +12,11 @@
         <input type="text" style="width: 500px;" />
       </div>
       <div class="number-item">
-        <div class="grid-right">開催日：</div>
+        <div class="grid-right">掲載開始日：</div>
         <input type="date" [(ngModel)]="informationDayFrom" style="width: 130px;" />
       </div>
       <div class="number-item">
-        <div class="grid-right">終了日：</div>
+        <div class="grid-right">掲載終了日：</div>
         <input type="date" [(ngModel)]="informationDayTo" style="width: 130px;" />
       </div>
     </div>
@@ -31,9 +31,9 @@
 
 <div class="table-area">
   <div class="t-head">
-    <div>内容</div>
-    <div>開催日</div>
-    <div>終了日</div>
+    <div>お知らせ詳細</div>
+    <div>掲載開催日</div>
+    <div>掲載終了日</div>
   </div>
 
   <div class="t-body" *ngFor="let item of informationItems">

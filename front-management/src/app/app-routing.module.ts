@@ -9,22 +9,21 @@ const routes: Routes = [
   {
     path: '',
     component: MainComponent,
-    children: [
-      {
-        path: 'information',
-        component: InformationListPageComponent,
-      },
-      {
-        path: 'information-list',
-        component: InformationEditPageComponent,
-      },
-      {
-        path: 'information-list:id',
-        component: InformationListPageComponent,
-      },
-      { path: 'information-edit', component: InformationEditPageComponent },
-    { path: 'login', component: LoginPageComponent },
-    ]
+    children: [
+      {
+        path: 'information',
+        component: InformationListPageComponent,
+      },
+      {
+        path: 'information/edit',
+        component: InformationEditPageComponent,
+      },
+      {
+        path: 'information/edit/:id',
+        component: InformationEditPageComponent,
+      },
+      { path: 'login', component: LoginPageComponent },
+    ],
   }
 ];
 

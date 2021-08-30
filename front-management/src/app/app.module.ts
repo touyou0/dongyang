@@ -13,7 +13,7 @@ import { LoginPageComponent } from './components/information-management/login-pa
 import { HeaderComponent } from './components/information-management/main/header/header.component';
 import { MatIconModule } from '@angular/material/icon';
 import { MatDialogModule } from '@angular/material/dialog';
-import { SafeHtmlPipe } from './components/pipes/safe-html.pipe';
+import { SafeHtmlPipe } from './pipes/safe-html.pipe';
 
 
 @NgModule({
