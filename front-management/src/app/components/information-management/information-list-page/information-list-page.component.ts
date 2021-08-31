@@ -1,6 +1,7 @@
 import { Component, OnInit } from '@angular/core';
 import { ActivatedRoute, Router } from '@angular/router';
-import { InformationRegisterRequest }  from 'src/app/core/model-services/information-model';
+import { InformationRegisterRequest } from 'src/app/core/model-services/information-model';
+import { ModelManagerService } from 'src/app/core/model-manager.service';
 
 @Component({
   selector: 'app-information-list-page',
@@ -21,7 +22,8 @@ export class InformationListPageComponent implements OnInit {
   informationItems: InformationRegisterRequest[] = [];
 
   constructor(
-    private router: Router
+    private router: Router,
+    private model: ModelManagerService
   ) { }
 
   /**
@@ -37,26 +39,30 @@ export class InformationListPageComponent implements OnInit {
    */
   private async doInit() {
     const date = new Date();
-    this.informationDayFrom = date.getFullYear() + '-' + ("0"+(date.getMonth() + 1)).slice(-2) + '-' +  ("0"+date.getDate()).slice(-2);
-    this.informationDayTo = date.getFullYear() + '-' + ("0"+(date.getMonth() + 2)).slice(-2) + '-' +  ("0"+date.getDate()).slice(-2);
-    this.informationItems = this.getArrayDummyData();
-    //this.informationItems.push()
-  }
+    this.informationDayFrom =
+      date.getFullYear() +
+      '-' +
+      ('0' + (date.getMonth() + 1)).slice(-2) +
+      '-' +
+      ('0' + date.getDate()).slice(-2);
+    this.informationDayTo =
+      date.getFullYear() +
+      '-' +
+      ('0' + (date.getMonth() + 2)).slice(-2) +
+      '-' +
+      ('0' + date.getDate()).slice(-2);
 
-  /**
-   * お知らせ情報一覧のダミーデータ作成
-   * @returns 
-   */
-  private getArrayDummyData(): InformationRegisterRequest[] {
-    var items: InformationRegisterRequest[] = [
-      {informationId: '10001', overview: '10001のお知らせ', detail: '10001のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'},
-      {informationId: '10002', overview: '10002のお知らせ', detail: '10002のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'},
-      {informationId: '10003', overview: '10003のお知らせ', detail: '10003のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'},
-      {informationId: '10004', overview: '10004のお知らせ', detail: '10004のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'},
-      {informationId: '10005', overview: '10005のお知らせ', detail: '10005のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'},
-      {informationId: '10006', overview: '10006のお知らせ', detail: '10006のお知らせの詳細', informationDayFrom: '2021-08-17', informationDayTo: '2021-08-21'}
-    ];
-    return items;
+    // TODO: ここでローディング開始
+
+    try {
+      const response = await this.model.information.get().toPromise();
+      this.informationItems = response.items;
+
+      // TODO: ここでローディング終了
+    } catch {
+      // TODO: ここでローディング終了
+      // TODO: 例外処理
+    }
   }
 
   /**
