@@ -7,13 +7,11 @@ import { AppRoutingModule } from './app-routing.module';
 import { AppComponent } from './app.component';
 import { InformationManagementComponent } from './components/information-management/information-management.component';
 import { InformationListPageComponent } from './components/information-management/information-list-page/information-list-page.component';
-import { MainComponent } from './components/information-management/main/main.component';
 import { InformationEditPageComponent } from './components/information-management/information-edit-page/information-edit-page.component';
-import { LoginPageComponent } from './components/information-management/login-page/login-page.component';
-import { HeaderComponent } from './components/information-management/main/header/header.component';
-import { MatIconModule } from '@angular/material/icon';
-import { MatDialogModule } from '@angular/material/dialog';
-import { SafeHtmlPipe } from './pipes/safe-html.pipe';
+import { HelpListPageComponent } from './components/settings-list/help-list-page/help-list-page.component';
+import { StatuteListPageComponent } from './components/settings-list/statute-list-page/statute-list-page.component';
+import { PrivacyListPageComponent } from './components/settings-list/privacy-list-page/privacy-list-page.component';
+import { ProductsComponent } from './components/settings-list/products/products.component';
 
 
 @NgModule({
@@ -21,18 +19,16 @@ import { SafeHtmlPipe } from './pipes/safe-html.pipe';
     AppComponent,
     InformationManagementComponent,
     InformationListPageComponent,
-    MainComponent,
     InformationEditPageComponent,
-    LoginPageComponent,
-    HeaderComponent,
-    SafeHtmlPipe,
+    HelpListPageComponent,
+    StatuteListPageComponent,
+    PrivacyListPageComponent,
+    ProductsComponent,
   ],
   imports: [
     BrowserModule,
     AppRoutingModule,
     FormsModule,
-    MatDialogModule,
-    MatIconModule,
     HttpClientModule,
   ],
   providers: [

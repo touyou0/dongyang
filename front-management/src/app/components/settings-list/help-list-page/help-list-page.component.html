@@ -1,0 +1,53 @@
+<main>
+  <p></p>
+  <div></div>
+  <ng-container *ngIf="isLoading; else content">
+  </ng-container>
+</main>
+
+<ng-template #content>
+  <div class="number-item">
+      <div class="grid-lift">カテゴリ&nbsp;&nbsp;&nbsp;&nbsp;
+        <select style="width: 100px;"></select>
+        <button class="btn btn-green qr" style="width: 40px; height: 30px;" (click)="onRegister()">設定</button>
+      </div>
+  </div>
+  
+  <div class="table-area">
+    <div class="t-head">
+      <div>カテゴリ</div>
+      <div>タイトル</div>
+      <div>内容</div>
+      <div></div>
+    </div>
+    <div class="t-body" *ngFor="let item of helpItems">
+      <ng-container *ngIf="item.mode === '' else edit">
+        <div>
+          <div class="grid-center">{{ item.category }}</div>
+        </div>
+        <div>
+          <div class="grid-center">{{ item.title }}</div>
+        </div>
+        <div>
+          <div class="grid-center">{{ item.content }}</div>
+        </div>
+      </ng-container>
+      <ng-template #edit>
+        <div><input type="text" style="width: 130px;" [(ngModel)]="item.category"></div>
+        <div><input type="text" style="width: 130px;" [(ngModel)]="item.title"></div>
+        <div><input type="text" style="width: 130px;" [(ngModel)]="item.content"></div>
+      </ng-template>
+      <div class="button-area">
+        <div>
+          <button class="btn btn-green qr" style="width: 40px; height: 30px;" (click)="onEdit(item)">
+            <ng-container *ngIf="item.mode === '' else save">編集</ng-container>
+            <ng-template #save>保存</ng-template>
+          </button>
+        </div>
+        <div>
+          <button class="btn btn-red qr" style="width: 40px; height: 30px;" (click)="onDelete(item)">削除</button>
+        </div>
+      </div>
+    </div>
+  </div>
+</ng-template>

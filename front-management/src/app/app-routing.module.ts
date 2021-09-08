@@ -2,13 +2,14 @@ import { NgModule } from '@angular/core';
 import { RouterModule, Routes } from '@angular/router';
 import { InformationListPageComponent } from './components/information-management/information-list-page/information-list-page.component'
 import { InformationEditPageComponent } from './components/information-management/information-edit-page/information-edit-page.component'
-import { LoginPageComponent } from './components/information-management/login-page/login-page.component';
-import { MainComponent } from './components/information-management/main/main.component';
+import { HelpListPageComponent } from './components/settings-list/help-list-page/help-list-page.component';
+import { StatuteListPageComponent } from './components/settings-list/statute-list-page/statute-list-page.component';
+import { PrivacyListPageComponent } from './components/settings-list/privacy-list-page/privacy-list-page.component';
+import { ProductsComponent } from './components/settings-list/products/products.component';
 
 const routes: Routes = [
   {
     path: '',
-    component: MainComponent,
     children: [
       {
         path: 'information',
@@ -21,8 +22,24 @@ const routes: Routes = [
       {
         path: 'information/edit/:id',
         component: InformationEditPageComponent,
-      },
-      { path: 'login', component: LoginPageComponent },
+      },
+      {
+        path: 'help',
+        component: HelpListPageComponent,
+      },
+      {
+        path: 'statute',
+        component: StatuteListPageComponent,
+      },
+      {
+        path: 'privacy',
+        component: PrivacyListPageComponent,
+      },
+      
+      {
+        path: 'products',
+        component: ProductsComponent,
+      },
     ],
   }
 ];

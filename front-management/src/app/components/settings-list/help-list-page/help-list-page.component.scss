@@ -1,0 +1,92 @@
+@import "/src/variables-styles.scss";
+
+main {
+  .info-area {
+    display: grid;
+    grid-template-columns: 300px 1fr;
+    column-gap: 5px;
+    margin-bottom: 5px;
+
+    .infos {
+      display: grid;
+      grid-template-rows: 30px 30px;
+      row-gap: 3px;
+
+      .number-info {
+        align-self: center;
+        display: grid;
+        grid-template-rows: repeat(2, auto);
+        row-gap: 2px;
+
+        .number-item {
+          align-self: center;
+          display: grid;
+          grid-template-columns: 150px 1fr;
+        }
+      }
+    }
+
+    .info-light {
+      display: grid;
+      grid-template-columns: 100px 50px 60px;
+      row-gap: 10px;
+      margin-left: auto;
+      float: right;
+    }
+  }
+
+  .table-area {
+    overflow-y: auto;
+
+    .t-head {
+      display: grid;
+      grid-template-columns: 150px 200px 900px 110px;
+      grid-template-rows: 30px;
+      position: sticky;
+      position: -webkit-sticky; /* For macOS/iOS Safari */
+      top: 0;
+      z-index: 2;
+    }
+
+    .t-body {
+      display: grid;
+      grid-template-columns: 150px 200px 900px 110px;
+      grid-template-rows: auto;
+      z-index: 1;
+
+      .button-area {
+        display: grid;
+        grid-template-columns: 50px 50px;
+      }
+    }
+  }
+
+  .t-head > div {
+    text-align: center;
+    border: 1px solid $border-color;
+    padding: 5px;
+    background: lightgrey;
+  }
+
+  .t-body > div {
+    display: grid;
+    text-align: left;
+    border: 1px solid $border-color;
+    padding: 3px;
+    min-height: 30px;
+
+    div {
+      align-self: center;
+      word-wrap: break-word;
+      overflow: hidden;
+    }
+  }
+}
+
+.grid-center {
+  text-align: center;
+}
+
+.grid-right {
+  text-align: right;
+}
